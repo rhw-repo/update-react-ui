@@ -7,7 +7,7 @@ interface CountProps {
 }
 
 const Count: FC<CountProps> = ({ data }) => {
-  const { number = "0", duration = "1000" } = data;
+  const { number = "0", duration = "1000", suffix = "" } = data;
   const [count, setCount] = useState("0");
 
   useEffect(() => {
@@ -58,7 +58,10 @@ const Count: FC<CountProps> = ({ data }) => {
 
   return (
     <div>
-      <span>{count}</span>
+      <span>
+        {count}
+        {suffix}
+      </span>
     </div>
   );
 };

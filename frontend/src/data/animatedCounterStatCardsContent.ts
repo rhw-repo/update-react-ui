@@ -2,6 +2,7 @@ export interface AnimatedCounterStatCard {
   id: string;
   number: string;
   duration: string;
+  suffix?: string;
   text: string;
   subtext?: string;
   imageWebp: string;
@@ -13,8 +14,9 @@ export const animatedCounterStatsCardContent: AnimatedCounterStatCard[] = [
     id: "001",
     duration: "600",
     number: "25.5",
-    text: "Decimal Numbers",
-    subtext: "Subtext",
+    suffix: "%",
+    text: "Typical Equity Allocation",
+    subtext: "Balanced",
     imageWebp: "/icons/benefits.webp",
     imageAvif: "/icons/benefits.avif",
   },
@@ -22,8 +24,8 @@ export const animatedCounterStatsCardContent: AnimatedCounterStatCard[] = [
     number: "17",
     duration: "1200",
     id: "002",
-    text: "Whole Numbers",
-    subtext: "Subtext",
+    text: "Years of Experience",
+    subtext: "Established",
     imageWebp: "/icons/graph.webp",
     imageAvif: "/icons/graph.avif",
   },
@@ -31,8 +33,8 @@ export const animatedCounterStatsCardContent: AnimatedCounterStatCard[] = [
     number: "20,500",
     duration: "2400",
     id: "003",
-    text: "With Commas",
-    subtext: "Subtext",
+    text: "Investors Served",
+    subtext: "Worldwide",
     imageWebp: "/icons/location.webp",
     imageAvif: "/icons/location.avif",
   },
@@ -40,8 +42,9 @@ export const animatedCounterStatsCardContent: AnimatedCounterStatCard[] = [
     number: "100",
     duration: "3000",
     id: "004",
-    text: "All timings flexible",
-    subtext: "Subtext",
+    suffix: "%",
+    text: "Regulatory Compliance",
+    subtext: "Audited",
     imageWebp: "/icons/insurance.webp",
     imageAvif: "/icons/insurance.avif",
   },

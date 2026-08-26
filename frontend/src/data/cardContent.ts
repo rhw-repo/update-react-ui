@@ -36,7 +36,7 @@ mauris.`,
     heading: "Building Wealth Through Smart Investing",
     subheading: "A disciplined approach to long-term returns",
     text: `Investing sensibly means thinking beyond today. By setting clear
-    goals, spreading your money across a range of assets, and staying
+    goals, spreading your money across a range of equities, and staying
     invested through market ups and downs, you can steadily work towards
     a more secure future for your family. There are no guarantees and no
     shortcuts, but patience, discipline and regular review can help your
@@ -53,13 +53,13 @@ mauris.`,
   },
   {
     id: "page-one-02",
-    heading: "Optional Heading: Page 1 Card 2",
-    subheading: "Optional Subheading: Card with list",
+    heading: "Planning for the Future",
+    subheading: "A few simple principles for long-term investing",
     listItems: [
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
+      `Start early and let compounding work in your favour.`,
+      `Spread your investments across a range of equities.`,
+      `We review your portfolio regularly.`,
+      `You're backed by a trusted, professionally regulated provider.`,
     ],
     bottomImages: [
       {
@@ -71,14 +71,14 @@ mauris.`,
   },
   {
     id: "page-two-01",
-    heading: "Optional Heading Page 2 Card 1",
-    subheading: "Optional Subheading: Card with text",
-    text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-    aliquet nec, vulputate eget, arcu.`,
+    heading: "A Portfolio Built Around You",
+    subheading: "Diversification designed around your goals",
+    text: `A well-built portfolio brings together different types of
+    investment, so no single event decides your outcome. We spread your
+    money across asset classes, regions and time horizons, adjusting it
+    steadily as your circumstances change. There are no guarantees and no
+    shortcuts, but a considered, diversified portfolio can support your
+    family's wealth for years to come.`,
     images: [
       {
         imageWebp: airportWebp,
@@ -89,13 +89,13 @@ mauris.`,
   },
   {
     id: "page-two-02",
-    heading: "Optional Heading: Page 2 Card 2",
-    subheading: "Optional Subheading: Card with list",
+    heading: "How We Manage Your Portfolio",
+    subheading: "A few principles that guide every portfolio we build",
     listItems: [
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
+      `Diversified across asset classes and regions.`,
+      `Aligned to your goals and appetite for risk.`,
+      `We review your portfolio regularly.`,
+      `You're backed by a trusted, professionally regulated provider.`,
     ],
     bottomImages: [
       {
@@ -107,14 +107,14 @@ mauris.`,
   },
   {
     id: "page-three-01",
-    heading: "Optional Heading Page 3 Card 1",
-    subheading: "Optional Subheading: Card with text",
-    text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-    aliquet nec, vulputate eget, arcu.`,
+    heading: "The Role of Dividends in Your Portfolio",
+    subheading: "A steady income stream alongside long-term growth",
+    text: `Dividends are a share of a company's profits paid out to
+    investors, and reinvesting them can add up meaningfully over time.
+    They won't turn a modest portfolio into a fortune overnight, but a
+    steady stream of dividend income can help smooth returns and support
+    your goals through changing markets. As with any investment, dividend
+    payments are never guaranteed.`,
     images: [
       {
         imageWebp: rollsRoyceWebp,
@@ -125,13 +125,13 @@ mauris.`,
   },
   {
     id: "page-three-02",
-    heading: "Optional Heading: Page 3 Card 2",
-    subheading: "Optional Subheading: Card with list",
+    heading: "Making the Most of Dividends",
+    subheading: "How dividend income fits into a considered strategy",
     listItems: [
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
+      `Paid from company profits, never guaranteed.`,
+      `Can be reinvested to compound over time.`,
+      `We review dividend-paying holdings regularly.`,
+      `You're backed by a trusted, professionally regulated provider.`,
     ],
     bottomImages: [
       {
@@ -143,14 +143,13 @@ mauris.`,
   },
   {
     id: "page-four-01",
-    heading: "Optional Heading Page 4 Card 1",
-    subheading: "Optional Subheading: Card with text",
-    text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-    aliquet nec, vulputate eget, arcu.`,
+    heading: "Why Diversifying Matters",
+    subheading: "Spreading risk across your investments",
+    text: `Diversifying means not putting all your eggs in one basket. By
+    spreading your money across different asset classes, sectors and
+    regions, you reduce your exposure to any single event or downturn.
+    It won't remove risk altogether, but a well-diversified portfolio
+    can help steady your journey towards long-term financial goals.`,
     images: [
       {
         imageWebp: greenCanoesWebp,
@@ -161,13 +160,13 @@ mauris.`,
   },
   {
     id: "page-four-02",
-    heading: "Page 4 Card 2",
-    subheading: "Optional Subheading: Card with list",
+    heading: "How We Diversify Your Investments",
+    subheading: "A few principles behind a well-spread portfolio",
     listItems: [
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
+      `Spread across asset classes, sectors and regions.`,
+      `Balanced to reduce exposure to any single event.`,
+      `We review diversification regularly.`,
+      `You're backed by a trusted, professionally regulated provider.`,
     ],
     bottomImages: [
       {
@@ -202,14 +201,14 @@ mauris.`,
   },
   {
     id: "page-five-01",
-    heading: "Optional Heading Page 5 Card 1",
-    subheading: "Optional Subheading: Card with text",
-    text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-    aliquet nec, vulputate eget, arcu.`,
+    heading: "Investing for Growth",
+    subheading: "Helping your money grow towards life's milestones",
+    text: `Growth investing focuses on assets with the potential to
+    increase in value over time, whether that's funding a child's
+    education, a first home, or a comfortable retirement. Markets rise
+    and fall, and growth is never guaranteed, but staying invested for
+    the long term has historically given patient investors the best
+    chance of reaching their goals.`,
     images: [
       {
         imageWebp: graduationWebP,
@@ -221,13 +220,13 @@ mauris.`,
   },
   {
     id: "page-five-02",
-    heading: "Page 5 Card 2",
-    subheading: "Optional Subheading: Card with list",
+    heading: "How We Support Your Growth",
+    subheading: "A few principles behind a long-term growth strategy",
     listItems: [
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
-      `Lorem ipsum dolor sit amet.`,
+      `Focused on assets with long-term growth potential.`,
+      `Aligned to the milestones that matter to your family.`,
+      `We review your growth strategy regularly.`,
+      `You're backed by a trusted, professionally regulated provider.`,
     ],
     bottomImages: [
       {

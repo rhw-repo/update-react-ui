@@ -49,7 +49,7 @@ mauris.`,
           "Antique brass hotel desk bell and reception sign at the front of house desk (photo shown on the link).",
       },
     ],
-    overlayText: "Strapline optional overlay.",
+    overlayText: "Investing wisely pays dividends.",
   },
   {
     id: "page-one-02",

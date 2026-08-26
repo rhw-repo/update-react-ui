@@ -61,7 +61,7 @@ const LatestNews = (): React.JSX.Element => {
             className={`${styles.latestNewsButton} interactive button--primary`}
             onClick={showNotFound}
           >
-            See a 404 Page Demo
+            404 Page
           </button>
         </div>
       </section>

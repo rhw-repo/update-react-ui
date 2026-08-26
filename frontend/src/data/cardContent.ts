@@ -16,12 +16,12 @@ import woodenDeckChairsAvif from "../assets/images/aaron-burden-cEukkv42O40-unsp
 export const cardContent: CardData[] = [
   {
     id: "explainer-paragraph-01",
-    subtextPreview: `*  Lorem ipsum dolor sit amet ... `,
-    fullSubtext: `*  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id efficitur 
-erat. Phasellus eget consectetur magna. Pellentesque nec magna varius, dictum 
-dolor a, placerat tellus. Quisque gravida semper rutrum. Vestibulum eget 
-sodales velit. Suspendisse in leo tristique, pellentesque magna id, efficitur 
-mauris.`,
+    subtextPreview: `*  The performance of investments can vary ... `,
+    fullSubtext: `*  The performance of investments can vary, and past results are not
+a reliable guide to future returns. Returns depend on a number of factors,
+including market conditions, fees, and timing. Vorlond is a professionally
+audited firm, fully regulated under applicable financial services
+legislation.`,
   },
   {
     id: "explainer-fulltext-01",

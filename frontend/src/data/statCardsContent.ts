@@ -7,26 +7,26 @@ export interface StatCard {
 
 export const statCardsContent: StatCard[] = [
   {
-    text: "Headline",
-    subtext: "Subheading",
+    text: "Smarter investing",
+    subtext: "Balanced portfolios",
     imageWebp: "/icons/benefits.webp",
     imageAvif: "/icons/benefits.avif",
   },
   {
-    text: "Headline",
-    subtext: "Subheading*",
+    text: "Vorlond Profile",
+    subtext: "Consistent returns*",
     imageWebp: "/icons/graph.webp",
     imageAvif: "/icons/graph.avif",
   },
   {
-    text: "Headline",
-    subtext: "Subheading",
+    text: "Micro to Macro",
+    subtext: "Diverse vehicles",
     imageWebp: "/icons/location.webp",
     imageAvif: "/icons/location.avif",
   },
   {
-    text: "Headline",
-    subtext: "Subheading*",
+    text: "Compliant, secure",
+    subtext: "Transparent, audited*",
     imageWebp: "/icons/insurance.webp",
     imageAvif: "/icons/insurance.avif",
   },

@@ -6,7 +6,7 @@ const HomeHeroVideo: React.FC = () => {
     <>
       <p className="sr-only">
         Drone aerial view video of a Canadian pine forest and lake. No audio.
-        Text 'HEADLINE' overlaid onto the video"
+        Text 'EXPLORE INVESTING' overlaid onto the video"
       </p>
       <div className={styles.videoSectionContainer}>
         <video

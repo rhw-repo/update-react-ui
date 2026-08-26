@@ -39,12 +39,12 @@
 
 /* SVG will not accept shared global pseudoclass */
 .linkIcon:hover {
-  background-color: #eceff3;
+  background-color: oklch(95.11% 0.0062 259.1);
 }
 
 .linkIcon:focus-visible,
 .linkIcon:active {
-  background-color: #e7eaee;
+  background-color: oklch(93.62% 0.0063 254.9);
 }
 
 .listItemLink {

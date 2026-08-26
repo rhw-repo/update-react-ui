@@ -29,12 +29,12 @@ export interface HomeLink {
 export const homeLinks: readonly HomeLink[] = [
   {
     slug: "page-one-01",
-    heading: "Equities",
-    subheading: "Optional Subheading",
-    preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    Donec quam felis, ultric ... `,
+    heading: "Building Wealth Through Smart Investing",
+    subheading: "A disciplined approach to long-term returns",
+    preview: `Investing sensibly means thinking beyond today. By setting
+    clear goals, spreading your money across a range of equities, and
+    staying invested through market ups and downs, you can steadily work
+    towards a more secure future ... `,
     imageWebp: hotelBellWebp,
     imageAvif: hotelBellAvif,
     imageAlt:
@@ -42,12 +42,12 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-two-01",
-    heading: "Portfolio",
-    subheading: "Optional Subheading",
-    preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    Donec quam felis, ultric ...`,
+    heading: "A Portfolio Built Around You",
+    subheading: "Diversification designed around your goals",
+    preview: `A well-built portfolio brings together different types of
+    investment, so no single event decides your outcome. We spread your
+    money across asset classes, regions and time horizons, adjusting it
+    steadily as your circumstances ...`,
     imageWebp: airportWebp,
     imageAvif: airportAvif,
     imageAlt:
@@ -55,12 +55,12 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-three-01",
-    heading: "Dividends",
-    subheading: "Optional Subheading",
-    preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    Donec quam felis, utlric...`,
+    heading: "The Role of Dividends in Your Portfolio",
+    subheading: "A steady income stream alongside long-term growth",
+    preview: `Dividends are a share of a company's profits paid out to
+    investors, and reinvesting them can add up meaningfully over time.
+    They won't turn a modest portfolio into a fortune overnight, but a
+    steady stream of dividend income ...`,
     imageWebp: rollsRoyceWebp,
     imageAvif: rollsRoyceAvif,
     imageAlt:

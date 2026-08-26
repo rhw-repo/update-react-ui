@@ -6,7 +6,7 @@
   align-items: center;
   margin-top: 2rem;
   outline-offset: 5px;
-  background-color: #faf4e1;
+  background-color: oklch(96.68% 0.0257 91.6);
 }
 
 .waveContainer {
@@ -19,7 +19,7 @@
 }
 
 .svgStyle {
-  fill: #cfa72e;
+  fill: oklch(74.53% 0.1388 89.7);
   width: 125%;
   height: auto;
   transform: rotate(180deg);

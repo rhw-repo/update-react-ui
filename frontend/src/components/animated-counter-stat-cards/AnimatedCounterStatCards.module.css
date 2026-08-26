@@ -42,7 +42,7 @@
   transform: translate(-50%, -50%);
   width: 3.8rem;
   height: 3.8rem;
-  background-color: #ffff;
+  background-color: oklch(100% 0 0);
   border: 5px solid var(--accent);
   border-radius: 50%;
   z-index: 4;

@@ -45,11 +45,11 @@ img {
 :root {
   --surface: rgba(255, 255, 255, 0.87);
   --surface-solid: rgba(255, 255, 255, 1);
-  --primary: #003566;
-  --accent: #ffc300;
-  --accent-dark: #00162a;
-  --accent-headline: #ffae00;
-  --error: #a2262c;
+  --primary: oklch(29.8% 0.0873 259.1);
+  --accent: oklch(85.4% 0.178 85.9);
+  --accent-dark: oklch(15.4% 0.0459 259.6);
+  --accent-headline: oklch(80.2% 0.178 68.3);
+  --error: oklch(45.5% 0.162 24.5);
   --elevation-box-shadow-05:
     0px 3px 5px rgba(0, 0, 0, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.14),
     0px 1px 10px rgba(0, 0, 0, 0.12);
@@ -67,7 +67,7 @@ img {
 }
 
 *:focus:focus-visible {
-  outline: 3px solid #66b2ff;
+  outline: 3px solid oklch(74.5% 0.128 249);
   outline-offset: 2px;
 }
 
@@ -137,11 +137,11 @@ img {
 }
 
 .button--primary:hover {
-  background-color: #234e7a;
+  background-color: oklch(38.9% 0.079 260);
 }
 
 .button--primary:active {
-  background-color: #00264d;
+  background-color: oklch(22.9% 0.068 259.4);
 }
 
 body {
@@ -181,7 +181,7 @@ body {
 /* Global Error styling */
 div.error {
   padding: 0.625rem;
-  background: #ffefef;
+  background: oklch(95.8% 0.016 15);
   border: 0.06rem solid var(--error);
   color: var(--error);
   border-radius: 0.5rem;

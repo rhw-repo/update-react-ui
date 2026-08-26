@@ -1,6 +1,6 @@
 # Demo of Styles
 
-[View Site](https://react-typescript-ui-demo-production.up.railway.app/)
+[View Site](https://react-typescript-ui-demo-chingu.up.railway.app/)
 Front End app developed from a company branded 'lookbook' type website, originally made with branding for a financial sector client in 2025.
 
 ### Technologies & Libraries:

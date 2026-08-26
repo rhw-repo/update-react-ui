@@ -60,7 +60,7 @@ const HomeHeroImage = () => {
           {showOverlay && (
             <div className={overlayTextWrapperClass}>
               <h2 className={overlayTextClass} role="presentation">
-                Optional Overlay Text
+                Growth Investing
               </h2>
             </div>
           )}

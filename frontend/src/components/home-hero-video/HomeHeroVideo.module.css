@@ -24,7 +24,7 @@
 }
 
 .videoSectionOverlay::before {
-  content: "EXPLORE INVESTING";
+  content: "GROWTH INVESTING";
   box-sizing: border-box;
   position: relative;
   z-index: 1;

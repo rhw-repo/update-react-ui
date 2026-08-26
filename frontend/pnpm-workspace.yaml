@@ -1,3 +1,4 @@
+# cache-bust: force Railway to re-read this file (2026-08-26)
 packages:
   - "."
 minimumReleaseAge: 4320

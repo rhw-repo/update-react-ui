@@ -29,7 +29,7 @@ export interface HomeLink {
 export const homeLinks: readonly HomeLink[] = [
   {
     slug: "page-one-01",
-    heading: "Heading",
+    heading: "Equities",
     subheading: "Optional Subheading",
     preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
     Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
@@ -42,7 +42,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-two-01",
-    heading: "Heading",
+    heading: "Portfolio",
     subheading: "Optional Subheading",
     preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
     Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
@@ -55,7 +55,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-three-01",
-    heading: "Heading",
+    heading: "Dividends",
     subheading: "Optional Subheading",
     preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
     Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
@@ -68,7 +68,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-four-01",
-    heading: "Heading",
+    heading: "Diversify",
     subheading: "Optional Subheading",
     preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
     Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
@@ -81,7 +81,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-five-01",
-    heading: "Heading",
+    heading: "Growth",
     subheading: "Optional Subheading",
     preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
     Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 

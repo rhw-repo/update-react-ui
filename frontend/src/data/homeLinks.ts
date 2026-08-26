@@ -29,7 +29,7 @@ export interface HomeLink {
 export const homeLinks: readonly HomeLink[] = [
   {
     slug: "page-one-01",
-    heading: "Building Wealth Through Smart Investing",
+    heading: "Equities",
     subheading: "A disciplined approach to long-term returns",
     preview: `Investing sensibly means thinking beyond today. By setting
     clear goals, spreading your money across a range of equities, and
@@ -42,7 +42,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-two-01",
-    heading: "A Portfolio Built Around You",
+    heading: "Portfolio",
     subheading: "Diversification designed around your goals",
     preview: `A well-built portfolio brings together different types of
     investment, so no single event decides your outcome. We spread your
@@ -55,7 +55,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-three-01",
-    heading: "The Role of Dividends in Your Portfolio",
+    heading: "Dividends",
     subheading: "A steady income stream alongside long-term growth",
     preview: `Dividends are a share of a company's profits paid out to
     investors, and reinvesting them can add up meaningfully over time.
@@ -69,11 +69,11 @@ export const homeLinks: readonly HomeLink[] = [
   {
     slug: "page-four-01",
     heading: "Diversify",
-    subheading: "Optional Subheading",
-    preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    Donec quam felis, ultric ... `,
+    subheading: "Spreading risk across your investments",
+    preview: `Diversifying means not putting all your eggs in one basket.
+    By spreading your money across different asset classes, sectors and
+    regions, you reduce your exposure to any single event or downturn.
+    It won't remove risk ... `,
     imageWebp: greenCanoesWebp,
     imageAvif: greenCanoesAvif,
     imageAlt:
@@ -82,11 +82,11 @@ export const homeLinks: readonly HomeLink[] = [
   {
     slug: "page-five-01",
     heading: "Growth",
-    subheading: "Optional Subheading",
-    preview: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-    Donec quam felis, ultric ... `,
+    subheading: "Helping your money grow towards life's milestones",
+    preview: `Growth investing focuses on assets with the potential to
+    increase in value over time, whether that's funding a child's
+    education, a first home, or a comfortable retirement. Markets rise
+    and fall ... `,
     imageWebp: graduationWebp,
     imageAvif: graduationAvif,
     imageAlt:

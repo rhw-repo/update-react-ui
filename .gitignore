@@ -1,0 +1,9 @@
+.pnpm-store
+node_modules
+.DS_Store
+.DS_*
+dist
+dist-ssr
+/build
+*.local
+*.log

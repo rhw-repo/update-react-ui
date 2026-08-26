@@ -248,6 +248,6 @@ export const noIconLinks: AbsoluteLinkTemplateNoIcon[] = [
     id: "copyright-1",
     url: "https://github.com/rhw-repo?tab=repositories",
     section: "copyright",
-    name: "© R Westnidge Brown, 2025",
+    name: "© R Westnidge Brown, 2026",
   },
 ];

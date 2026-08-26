@@ -6,6 +6,8 @@ import {
   noIconLinks,
   type AbsoluteLinkTemplateNoIcon,
 } from "../../data/absoluteLinks.ts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const AttributionListDialog: React.FC = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -60,20 +62,21 @@ const AttributionListDialog: React.FC = () => {
       </div>
 
       <dialog ref={dialogRef} className={styles.attributionDialog}>
+        <div className={styles.buttonWrapper}>
+          <button
+            type="button"
+            className={`interactive button--primary ${styles.closeButton}`}
+            onClick={handleHide}
+          >
+            <FontAwesomeIcon icon={faXmark} aria-hidden="true" />
+            <span className="sr-only">Hide Credits</span>
+          </button>
+        </div>
         <div className={styles.attributionLinksWrapper}>
           <h2>Icons, Images & Videos By</h2>
           <div className={styles.attributionList}>
             <AttributionList />
           </div>
-        </div>
-        <div className={styles.buttonWrapper}>
-          <button
-            type="button"
-            className="interactive button--primary"
-            onClick={handleHide}
-          >
-            Hide Credits
-          </button>
         </div>
       </dialog>
     </>

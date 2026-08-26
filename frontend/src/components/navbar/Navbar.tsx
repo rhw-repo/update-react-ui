@@ -18,7 +18,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ onContactClick }: NavbarProps) => {
-  const message = "LOGOTYPE";
+  const message = "VORLOND";
   const location = useLocation();
   const { pathname } = location;
 
@@ -104,7 +104,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
           <source srcSet={logoWebp} type="image/webp" />
           <img
             src={logoAvif}
-            alt="Generic logo"
+            alt="Vorlond logo"
             loading="lazy"
             className={styles.navBrandLogo}
           />
@@ -121,7 +121,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
           <source srcSet={logoWebp} type="image/webp" />
           <img
             src={logoAvif}
-            alt="Generic logo"
+            alt="Vorlond logo"
             loading="lazy"
             className={styles.navBrandLogo}
           />

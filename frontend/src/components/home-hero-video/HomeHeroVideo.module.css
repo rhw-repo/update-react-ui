@@ -18,8 +18,13 @@
   object-fit: cover;
 }
 
+.videoSectionOverlay {
+  width: 100%;
+  text-align: center;
+}
+
 .videoSectionOverlay::before {
-  content: "HEADLINE";
+  content: "EXPLORE INVESTING";
   box-sizing: border-box;
   position: relative;
   z-index: 1;
@@ -27,6 +32,7 @@
   justify-content: center;
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
   background-color: transparent;
   color: var(--accent-headline);
   font-family: "cabin";

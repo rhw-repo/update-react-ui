@@ -52,7 +52,7 @@ const HomeHeroImage = () => {
                 <img className={styles.heroImageLogoImg} src={logoAvif} />
               </picture>
               <figcaption className={styles.heroImageLogoCaption}>
-                LOGOTYPE
+                VORLOND
               </figcaption>
             </figure>
           </h1>

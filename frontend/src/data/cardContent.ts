@@ -238,13 +238,13 @@ mauris.`,
   },
   {
     id: "wave-section-divider",
-    heading: "Shaped Section Dividers",
-    subheading: "Section Edges Styling",
+    heading: "Our Approach to Investing",
+    subheading: "Steady principles, applied consistently",
     listItems: [
-      `Pages can de thematically divided using different background colors and section dividers`,
-      `It could be a straight horizontal section end or more complex shapes`,
-      `This example shows a simple wave pattern`,
-      `Section ending shapes, dimensions & colours are adjustable`,
+      `We build diversified portfolios across equities and other asset classes.`,
+      `Dividends and growth are balanced to suit your goals.`,
+      `Your portfolio is reviewed regularly by our team.`,
+      `Every decision is guided by patience, not speculation.`,
     ],
     bottomImages: [
       {

@@ -1,6 +1,5 @@
 import styles from "./StatCards.module.css";
 import { type StatCard } from "../../data/statCardsContent";
-//import { statCardsContent } from "../../data/statCardsContent";
 import Card from "../card/Card";
 import { cardContent } from "../../data/cardContent";
 

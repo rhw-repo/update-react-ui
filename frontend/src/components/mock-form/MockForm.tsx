@@ -1,5 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import styles from "./MockForm.module.css";
+
+/* ---- DOMPurify sanitization, for reference when a real API submission is added ----
 import DOMPurify from "../../../dompurifyConfig";
 
 type FormValues = {
@@ -8,6 +10,7 @@ type FormValues = {
   introducer?: string;
   message?: string;
 };
+*/
 
 const useInput = (initialValue: string) => {
   const [value, setValue] = useState(initialValue);
@@ -41,6 +44,7 @@ const MockForm = (): React.JSX.Element => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
 
+    /* ---- Example DOMPurify sanitization for a future API submission ----
     const values: FormValues = {
       name: DOMPurify.sanitize(nameInput.value),
       email: DOMPurify.sanitize(emailInput.value),
@@ -51,31 +55,11 @@ const MockForm = (): React.JSX.Element => {
         ? DOMPurify.sanitize(messageInput.value)
         : undefined,
     };
+    */
 
     // No op placeholder until API call implemented
-    console.log(values);
     clearFields();
   };
-
-  /* ---- Example try catch block for future API call to middleware & database ----
-
-async function postContact(values: FormValues): Promise<void> {
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
-    });
-    if (!res.ok) {
-      throw new Error(`Server error: ${res.status} ${res.statusText}`);
-    }
-    // handle success (e.g. show confirmation, reset form)
-  } catch (err) {
-    console.error("Submission failed", err);
-    // render error message
-  }
-}
-*/
 
   return (
     <>

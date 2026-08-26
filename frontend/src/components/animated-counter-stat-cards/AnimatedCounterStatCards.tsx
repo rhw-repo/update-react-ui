@@ -1,7 +1,5 @@
 import styles from "./AnimatedCounterStatCards.module.css";
-//import { type CounterTextShape } from "../../data/counterTextShapesContent";
 import { type AnimatedCounterStatCard } from "../../data/animatedCounterStatCardsContent";
-//import { animatedCounterStatsCardContent } from "../../data/animatedCounterStatCardsContent";
 import Count from "../count/Count";
 
 export interface AnimatedCounterStatCardsProps  {

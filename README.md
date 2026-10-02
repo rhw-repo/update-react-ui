@@ -1,7 +1,7 @@
-# Demo of Styles
+# Gold Investing Website
 
 [View Site](https://react-typescript-ui-demo-chingu.up.railway.app/)
-Front End app developed from a company branded 'lookbook' type website, originally made with branding for a financial sector client in 2025.
+Front End website developed from a company branded 'lookbook' type website, originally made with branding for a financial sector client in 2025.
 
 ### Technologies & Libraries:
 
@@ -18,11 +18,9 @@ Self-hosted assets:
 
 ---
 
-### Team Structure
+### Role
 
-- **Front End Developer:** Sole responsibility for design and implementation using React v19 + TypeScript in Vite; data populated from `.ts` files
-
-- **Back End Developer:** Client liaison, build the CMS layer/middleware and migrate existing database
+- **Front End Developer:** Sole responsibility for design and implementation using React v19 + TypeScript; data populated from `.ts` files
 
 ---
 

@@ -1,6 +1,5 @@
 # Gold Investing Website
 
-[View Site](https://react-typescript-ui-demo-chingu.up.railway.app/)
 Front End website developed from a company branded 'lookbook' type website, originally made with branding for a financial sector client in 2025.
 
 ### Technologies & Libraries:
@@ -16,6 +15,7 @@ Self-hosted assets:
 - WebP & AVIF images
 - mp4 Video background
 
+[Visit Live Website](https://react-typescript-ui-demo-chingu.up.railway.app/)
 ---
 
 ### Role

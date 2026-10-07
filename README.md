@@ -15,8 +15,7 @@ Self-hosted assets:
 - WebP & AVIF images
 - mp4 Video background
 
-[Visit Live Website](https://react-typescript-ui-demo-chingu.up.railway.app/)
----
+## [Visit Live Website](https://react-typescript-ui-demo-chingu.up.railway.app/)
 
 ### Role
 
@@ -36,7 +35,6 @@ Self-hosted assets:
 - Default Homepage: video hero section
 - Three variants with static hero images
 - Animated KPI counter demo
-- Wave section divider and thematic page background colors
 - Shaped highlight boxes for key headlines
 - Printable light-mode sections for on demand PDFs
 

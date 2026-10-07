@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem 1rem 0 1rem;
-  background-color: transparent;
+  margin: 1rem;
 }
 
 .pageCardsSectionCardWrapper {
@@ -56,7 +55,7 @@
   grid-area: subheading;
   padding: 1rem 1rem 0 1rem;
   margin: 0;
-  color: var(--accent);
+  color: var(--accent-dark);
   font-size: 1rem;
 }
 
@@ -111,7 +110,7 @@
 .imageTop {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 5 / 2;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
 }
@@ -119,7 +118,7 @@
 .imageBottom {
   display: block;
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 5 / 2;
   overflow: hidden;
   border-radius: 0;
   padding-bottom: 0;
@@ -142,17 +141,16 @@
   white-space: nowrap;
   width: fit-content;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  padding: 0.25rem 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
-  color: var(--surface-solid);
+  color: var(--accent-dark);
   font-family: "cabin", sans-serif;
   font-size: clamp(1.25rem, 3vw, 2rem);
   font-weight: 700;
   z-index: 2;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
   pointer-events: none;
 }
 
@@ -180,16 +178,7 @@
 
   .imageTop,
   .imageBottom {
-    aspect-ratio: 16 / 9;
-    max-height: 30rem;
-  }
-
-  .imageTop img {
-    object-position: top;
-  }
-
-  .imageBottom img {
-    object-position: center;
+    max-height: 18rem;
   }
 }
 
@@ -212,15 +201,5 @@
 
   .listItem {
     text-wrap: balance;
-  }
-
-  .imageTop img,
-  .imageBottom img {
-    aspect-ratio: 16 / 9;
-    max-height: 36rem;
-  }
-
-  .imageBottom img {
-    object-position: bottom;
   }
 }

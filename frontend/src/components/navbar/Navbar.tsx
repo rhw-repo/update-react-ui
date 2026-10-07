@@ -14,7 +14,6 @@ import LogoAvif from "../../assets/images/LogoAccentTransparent.avif";
 
 interface NavbarProps {
   onContactClick: () => void;
-  message?: string;
 }
 
 const Navbar = ({ onContactClick }: NavbarProps) => {
@@ -44,7 +43,6 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
   const contentClassName = isHome
     ? styles.navContentContainer
     : `${styles.navContentContainer} ${styles.navContentContainerPages}`;
-  const navClassName = isHome ? styles.nav : `${styles.nav} ${styles.navPages}`;
 
   const menuItems = [
     { to: "/", label: "Default Home" },
@@ -52,9 +50,8 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
     { to: "/home-two", label: "Home Two" },
     { to: "/home-three", label: "Home Three" },
     { to: "/animated-counters", label: "Animated Counters" },
-    { to: "/wave-section-divider", label: "Wave Section Divider" },
     { to: "/shapes-examples", label: "Shapes Examples" },
-    { to: "/page-one-01", label: "Simple Page Example" },
+    { to: "/page-one-01", label: "Simple Card Example" },
   ];
 
   const toggleMenuVisibility = () => setOpen((prevOpen) => !prevOpen);
@@ -78,7 +75,6 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
     e.preventDefault();
     close();
   };
-
 
   const logoWebp = LogoWebp;
   const logoAvif = LogoAvif;
@@ -141,7 +137,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
     : homePagesTemplate;
 
   return (
-    <header className={navClassName} role="banner">
+    <header className={styles.nav} role="banner">
       <section className={contentClassName}>
         <div>
           <button

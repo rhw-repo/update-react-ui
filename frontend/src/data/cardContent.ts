@@ -42,8 +42,10 @@ mauris.`,
     wealth grow steadily over time.`,
     images: [
       {
+        id: "page-one-01-images-1",
         imageWebp: hotelBellWebp,
         imageAvif: hotelBellAvif,
+        imagePosition: "50% 55%",
         imageAlt:
           "Antique brass hotel desk bell and reception sign at the front of house desk (photo shown on the link).",
       },
@@ -55,15 +57,26 @@ mauris.`,
     heading: "Planning for the Future",
     subheading: "A few simple principles for long-term investing",
     listItems: [
-      `Start early and let compounding work in your favour.`,
-      `Spread your investments across a range of equities.`,
-      `We review your portfolio regularly.`,
-      `You're backed by a trusted, professionally regulated provider.`,
+      {
+        id: "page-one-02-list-1",
+        text: `Start early and let compounding work in your favour.`,
+      },
+      {
+        id: "page-one-02-list-2",
+        text: `Spread your investments across a range of equities.`,
+      },
+      { id: "page-one-02-list-3", text: `We review your portfolio regularly.` },
+      {
+        id: "page-one-02-list-4",
+        text: `You're backed by a trusted, professionally regulated provider.`,
+      },
     ],
     bottomImages: [
       {
+        id: "page-one-02-bottomImages-1",
         imageWebp: woodenDeckchairsWebP,
         imageAvif: woodenDeckChairsAvif,
+        imagePosition: "50% 70%",
         imageAlt: "Blue deckchairs on a sandy beach facing the sea.",
       },
     ],
@@ -80,8 +93,10 @@ mauris.`,
     family's wealth for years to come.`,
     images: [
       {
+        id: "page-two-01-images-1",
         imageWebp: airportWebp,
         imageAvif: airportAvif,
+        imagePosition: "50% 25%",
         imageAlt: "A man sits in an airport lounge watching a plane take off.",
       },
     ],
@@ -91,15 +106,26 @@ mauris.`,
     heading: "How We Manage Your Portfolio",
     subheading: "A few principles that guide every portfolio we build",
     listItems: [
-      `Diversified across asset classes and regions.`,
-      `Aligned to your goals and appetite for risk.`,
-      `We review your portfolio regularly.`,
-      `You're backed by a trusted, professionally regulated provider.`,
+      {
+        id: "page-two-02-list-1",
+        text: `Diversified across asset classes and regions.`,
+      },
+      {
+        id: "page-two-02-list-2",
+        text: `Aligned to your goals and appetite for risk.`,
+      },
+      { id: "page-two-02-list-3", text: `We review your portfolio regularly.` },
+      {
+        id: "page-two-02-list-4",
+        text: `You're backed by a trusted, professionally regulated provider.`,
+      },
     ],
     bottomImages: [
       {
+        id: "page-two-02-bottomImages-1",
         imageWebp: woodenDeckchairsWebP,
         imageAvif: woodenDeckChairsAvif,
+        imagePosition: "50% 70%",
         imageAlt: "Blue deckchairs on a sandy beach facing the sea.",
       },
     ],
@@ -116,8 +142,10 @@ mauris.`,
     payments are never guaranteed.`,
     images: [
       {
+        id: "page-three-01-images-1",
         imageWebp: rollsRoyceWebp,
         imageAvif: rollsRoyceAvif,
+        imagePosition: "50% 82%",
         imageAlt: "A Rolls Royce in front of a hotel door.",
       },
     ],
@@ -127,15 +155,29 @@ mauris.`,
     heading: "Making the Most of Dividends",
     subheading: "How dividend income fits into a considered strategy",
     listItems: [
-      `Paid from company profits, never guaranteed.`,
-      `Can be reinvested to compound over time.`,
-      `We review dividend-paying holdings regularly.`,
-      `You're backed by a trusted, professionally regulated provider.`,
+      {
+        id: "page-three-02-list-1",
+        text: `Paid from company profits, never guaranteed.`,
+      },
+      {
+        id: "page-three-02-list-2",
+        text: `Can be reinvested to compound over time.`,
+      },
+      {
+        id: "page-three-02-list-3",
+        text: `We review dividend-paying holdings regularly.`,
+      },
+      {
+        id: "page-three-02-list-4",
+        text: `You're backed by a trusted, professionally regulated provider.`,
+      },
     ],
     bottomImages: [
       {
+        id: "page-three-02-bottomImages-1",
         imageWebp: woodenDeckchairsWebP,
         imageAvif: woodenDeckChairsAvif,
+        imagePosition: "50% 70%",
         imageAlt: "Blue deckchairs on a sandy beach facing the sea.",
       },
     ],
@@ -151,8 +193,10 @@ mauris.`,
     can help steady your journey towards long-term financial goals.`,
     images: [
       {
+        id: "page-four-01-images-1",
         imageWebp: greenCanoesWebp,
         imageAvif: greenCanoesAvif,
+        imagePosition: "50% 50%",
         imageAlt: "Green canoes waiting at a lakeside jetty.",
       },
     ],
@@ -162,15 +206,29 @@ mauris.`,
     heading: "How We Diversify Your Investments",
     subheading: "A few principles behind a well-spread portfolio",
     listItems: [
-      `Spread across asset classes, sectors and regions.`,
-      `Balanced to reduce exposure to any single event.`,
-      `We review diversification regularly.`,
-      `You're backed by a trusted, professionally regulated provider.`,
+      {
+        id: "page-four-02-list-1",
+        text: `Spread across asset classes, sectors and regions.`,
+      },
+      {
+        id: "page-four-02-list-2",
+        text: `Balanced to reduce exposure to any single event.`,
+      },
+      {
+        id: "page-four-02-list-3",
+        text: `We review diversification regularly.`,
+      },
+      {
+        id: "page-four-02-list-4",
+        text: `You're backed by a trusted, professionally regulated provider.`,
+      },
     ],
     bottomImages: [
       {
+        id: "page-four-02-bottomImages-1",
         imageWebp: woodenDeckchairsWebP,
         imageAvif: woodenDeckChairsAvif,
+        imagePosition: "50% 70%",
         imageAlt: "Blue deckchairs on a sandy beach facing the sea.",
       },
     ],
@@ -210,8 +268,10 @@ mauris.`,
     chance of reaching their goals.`,
     images: [
       {
+        id: "page-five-01-images-1",
         imageWebp: graduationWebP,
         imageAvif: graduationAvif,
+        imagePosition: "50% 15%",
         imageAlt:
           "Rear view of a graduate in gown and cap standing in front of the ocean.",
       },
@@ -222,33 +282,29 @@ mauris.`,
     heading: "How We Support Your Growth",
     subheading: "A few principles behind a long-term growth strategy",
     listItems: [
-      `Focused on assets with long-term growth potential.`,
-      `Aligned to the milestones that matter to your family.`,
-      `We review your growth strategy regularly.`,
-      `You're backed by a trusted, professionally regulated provider.`,
-    ],
-    bottomImages: [
       {
-        imageWebp: woodenDeckchairsWebP,
-        imageAvif: woodenDeckChairsAvif,
-        imageAlt: "Blue deckchairs on a sandy beach facing the sea.",
+        id: "page-five-02-list-1",
+        text: `Focused on assets with long-term growth potential.`,
+      },
+      {
+        id: "page-five-02-list-2",
+        text: `Aligned to the milestones that matter to your family.`,
+      },
+      {
+        id: "page-five-02-list-3",
+        text: `We review your growth strategy regularly.`,
+      },
+      {
+        id: "page-five-02-list-4",
+        text: `You're backed by a trusted, professionally regulated provider.`,
       },
     ],
-  },
-  {
-    id: "wave-section-divider",
-    heading: "Our Approach to Investing",
-    subheading: "Steady principles, applied consistently",
-    listItems: [
-      `We build diversified portfolios across equities and other asset classes.`,
-      `Dividends and growth are balanced to suit your goals.`,
-      `Your portfolio is reviewed regularly by our team.`,
-      `Every decision is guided by patience, not speculation.`,
-    ],
     bottomImages: [
       {
+        id: "page-five-02-bottomImages-1",
         imageWebp: woodenDeckchairsWebP,
         imageAvif: woodenDeckChairsAvif,
+        imagePosition: "50% 70%",
         imageAlt: "Blue deckchairs on a sandy beach facing the sea.",
       },
     ],

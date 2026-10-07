@@ -30,6 +30,7 @@ const ExcerptLinkTemplate = ({ links }: Props): React.JSX.Element => {
         {links.map(
           ({
             slug,
+            linkTo,
             heading,
             subheading,
             preview,
@@ -40,7 +41,7 @@ const ExcerptLinkTemplate = ({ links }: Props): React.JSX.Element => {
           }) => (
             <li key={slug} className={styles.listItem}>
               <Link
-                to={`/${slug}`}
+                to={`/${linkTo ?? slug}`}
                 className={`${styles.listItemLink} ${styles.listItemGrid}`}
               >
                 {/* Row One */}

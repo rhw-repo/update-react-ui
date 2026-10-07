@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 1rem;
+  margin: 1rem;
+  padding: 1rem 0;
 }
 
 .sectionCard {
@@ -110,7 +111,7 @@
 @media screen and (min-width: 1025px) {
   .section {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
   }
 }

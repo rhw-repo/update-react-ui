@@ -153,18 +153,8 @@ body {
 }
 
 .pages__section {
-  margin: 0 auto;
-}
-
-/* PageThree & PageFive: first card image */
-.page-three img.topImage {
-  object-fit: cover;
-  object-position: 50% 55%;
-}
-
-.page-five img.topImage {
-  object-fit: cover;
-  object-position: 50% 20%;
+  margin: 1rem auto;
+  padding: 1rem 0;
 }
 
 .sr-only {

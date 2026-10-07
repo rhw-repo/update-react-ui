@@ -25,10 +25,10 @@ const RelativeLinkTemplate = ({ links }: Props): React.JSX.Element => {
     <section className={styles.linkSection}>
       <ul className={styles.list}>
         {links.map(
-          ({ slug, heading, imageWebp, imageAvif, imageAlt, imagePosition }) => (
+          ({ slug, linkTo, heading, imageWebp, imageAvif, imageAlt, imagePosition }) => (
           <li key={slug} className={styles.listItem}>
             <Link
-              to={`/${slug}`}
+              to={`/${linkTo ?? slug}`}
               className={`${styles.listItemLink} ${styles.listItemGrid}`}
             >
               <div className={styles.listItemImageWrapper}>

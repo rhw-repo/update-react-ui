@@ -53,10 +53,6 @@
   cursor: default;
 }
 
-.navPages {
-  border-bottom: 3px solid var(--accent);
-}
-
 .navHamburgerContainer {
   position: relative;
   display: flex;

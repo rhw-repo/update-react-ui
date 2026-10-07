@@ -19,24 +19,31 @@ const PagesCard = ({
 }: CardData): React.JSX.Element => {
   const listIcons = [faBusinessTime, faLocationDot, faBullhorn, faClipboardCheck];
 
-  const isHeading = !!heading && heading.length > 0;
-  const headingElement = isHeading ? (
+  const headingElement = heading ? (
     <h2 className={styles.cardWrapperHeading}>{heading}</h2>
   ) : null;
 
-  const isSubheading = !!subheading && subheading.length > 0;
-  const subheadingElement = isSubheading ? (
+  const subheadingElement = subheading ? (
     <h3 className={styles.cardWrapperSubheading}>{subheading}</h3>
   ) : null;
 
-  const isImages = Array.isArray(images) && images.length > 0;
-  const imageListElement = isImages ? (
+  const imageListElement = images.length > 0 ? (
     <ul className={styles.imageList}>
       {images.map((img: ImageItem, idx: number) => (
-        <li key={idx} className={styles.imageListItem}>
+        <li key={img.id} className={styles.imageListItem}>
           <picture className={styles.imageTop}>
             <source srcSet={img.imageWebp} type="image/webp" />
-            <img src={img.imageAvif} alt={img.imageAlt} className={`${styles.imageTop} topImage`} fetchPriority="high" />
+            <img
+              src={img.imageAvif}
+              alt={img.imageAlt}
+              className={`${styles.imageTop} topImage`}
+              fetchPriority="high"
+              style={
+                img.imagePosition
+                  ? { objectPosition: img.imagePosition }
+                  : undefined
+              }
+            />
           </picture>
           {overlayText && idx === 0 && (
             <span className={styles.overlayText}>{overlayText}</span>
@@ -46,48 +53,45 @@ const PagesCard = ({
     </ul>
   ) : null;
 
-  const isText = !!text && text.length > 0;
-  const textElement = isText
-    ? text.split(/\n{2,}/).map((paragraph, idx) => (
-        <p key={idx} className={styles.cardWrapperText}>
+  const textElement = text
+    ? text.split(/\n{2,}/).map((paragraph) => (
+        <p key={paragraph} className={styles.cardWrapperText}>
           {paragraph}
         </p>
       ))
     : null;
 
-  let iconIndex = 0;
-  const listNodes: React.ReactNode[] = [];
-  if (Array.isArray(listItems) && listItems.length > 0) {
-    for (let i = 0; i < listItems.length; i++) {
-      const item = listItems[i];
-      listNodes.push(
-        <li key={i} className={styles.listItem}>
-          <FontAwesomeIcon
-            icon={listIcons[iconIndex]}
-            className={styles.listIcon}
-          />
-          {item}
-        </li>
-      );
-
-      iconIndex++;
-      if (iconIndex === listIcons.length) {
-        iconIndex = 0;
-      }
-    }
-  }
-
   const listElement =
-    listNodes.length > 0 ? <ul className={styles.list}>{listNodes}</ul> : null;
+    listItems.length > 0 ? (
+      <ul className={styles.list}>
+        {listItems.map((item, i) => (
+          <li key={item.id} className={styles.listItem}>
+            <FontAwesomeIcon
+              icon={listIcons[i % listIcons.length]}
+              className={styles.listIcon}
+            />
+            {item.text}
+          </li>
+        ))}
+      </ul>
+    ) : null;
 
-  const isBottomImages = Array.isArray(bottomImages) && bottomImages.length > 0;
-  const bottomImageElement = isBottomImages ? (
+  const bottomImageElement = bottomImages.length > 0 ? (
     <ul className={`${styles.imageList} ${styles.bottomImageList}`}>
-      {bottomImages.map((img: ImageItem, idx: number) => (
-        <li key={idx} className={styles.imageListItem}>
+      {bottomImages.map((img: ImageItem) => (
+        <li key={img.id} className={styles.imageListItem}>
           <picture className={styles.imageBottom}>
             <source srcSet={img.imageWebp} type="image/webp" />
-            <img src={img.imageAvif} alt={img.imageAlt} loading="lazy" />
+            <img
+              src={img.imageAvif}
+              alt={img.imageAlt}
+              loading="lazy"
+              style={
+                img.imagePosition
+                  ? { objectPosition: img.imagePosition }
+                  : undefined
+              }
+            />
           </picture>
         </li>
       ))}
@@ -95,20 +99,18 @@ const PagesCard = ({
   ) : null;
 
   return (
-    <>
-      <section className={styles.pageCardsSection}>
-        <div className={styles.pageCardsSectionCardWrapper}>
-          {imageListElement}
-          {headingElement}
-          {subheadingElement}
-          <div className={styles.cardWrapperTextGroup}>
-            {textElement}
-            {listElement}
-            {bottomImageElement}
-          </div>
+    <section className={styles.pageCardsSection}>
+      <div className={styles.pageCardsSectionCardWrapper}>
+        {imageListElement}
+        {headingElement}
+        {subheadingElement}
+        <div className={styles.cardWrapperTextGroup}>
+          {textElement}
+          {listElement}
+          {bottomImageElement}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

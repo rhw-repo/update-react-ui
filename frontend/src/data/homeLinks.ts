@@ -17,6 +17,7 @@ export interface HomeLink {
     | "page-four-01"
     | "page-five-01"
     | "latest-news-01";
+  linkTo?: HomeLink["slug"];
   heading?: string;
   subheading?: string;
   preview?: string;
@@ -43,6 +44,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-two-01",
+    linkTo: "page-one-01",
     heading: "Portfolio",
     subheading: "Diversification designed around your goals",
     preview: `A well-built portfolio brings together different types of
@@ -56,6 +58,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-three-01",
+    linkTo: "page-one-01",
     heading: "Dividends",
     subheading: "A steady income stream alongside long-term growth",
     preview: `Dividends are a share of a company's profits paid out to
@@ -69,6 +72,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-four-01",
+    linkTo: "page-one-01",
     heading: "Diversify",
     subheading: "Spreading risk across your investments",
     preview: `Diversifying means not putting all your eggs in one basket.
@@ -82,6 +86,7 @@ export const homeLinks: readonly HomeLink[] = [
   },
   {
     slug: "page-five-01",
+    linkTo: "page-one-01",
     heading: "Growth",
     subheading: "Helping your money grow towards life's milestones",
     preview: `Growth investing focuses on assets with the potential to

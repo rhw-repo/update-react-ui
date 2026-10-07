@@ -21,14 +21,19 @@ export type CardID =
   | "page-five-03"
   | "contact-01"
   | "animated-counters"
-  | "wave-section-divider"
-  | "shapes-examples"
- 
+  | "shapes-examples";
 
 export type ImageItem = {
+  id: string;
   imageWebp: string;
   imageAvif: string;
   imageAlt: string;
+  imagePosition?: string;
+};
+
+export type ListItem = {
+  id: string;
+  text: string;
 };
 
 export type CardData = {
@@ -50,6 +55,11 @@ export type CardData = {
   thirdBottomImages?: ImageItem[];
   overlayText?: string;
   newsHeading?: string;
-  section?: "footer" | "menu" | "latest-news" | "attribution-list" | "copyright" | string;
-  listItems?: string[];
+  section?:
+    | "footer"
+    | "menu"
+    | "latest-news"
+    | "attribution-list"
+    | "copyright";
+  listItems?: ListItem[];
 };

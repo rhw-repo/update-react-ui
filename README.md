@@ -94,4 +94,4 @@ npm run dev or yarn dev
 
 [![LinkedIn](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/ruth-westnidge/)
 
-© 2025 Ruth Westnidge Brown
+© 2026 Ruth Westnidge Brown

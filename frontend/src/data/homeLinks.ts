@@ -23,6 +23,7 @@ export interface HomeLink {
   imageWebp?: string;
   imageAvif: string;
   imageAlt?: string;
+  imagePosition?: string;
   newsHeading?: string;
 }
 
@@ -89,6 +90,7 @@ export const homeLinks: readonly HomeLink[] = [
     and fall ... `,
     imageWebp: graduationWebp,
     imageAvif: graduationAvif,
+    imagePosition: "50% 15%",
     imageAlt:
       "Rear view of a graduate in gown and cap looking out to sea (photo shown on the link).",
   },

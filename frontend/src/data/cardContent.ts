@@ -16,7 +16,6 @@ import woodenDeckChairsAvif from "../assets/images/aaron-burden-cEukkv42O40-unsp
 export const cardContent: CardData[] = [
   {
     id: "explainer-paragraph-01",
-    subtextPreview: `*  The performance of investments can vary ... `,
     fullSubtext: `*  The performance of investments can vary, and past results are not
 a reliable guide to future returns. Returns depend on a number of factors,
 including market conditions, fees, and timing. Vorlond is a professionally

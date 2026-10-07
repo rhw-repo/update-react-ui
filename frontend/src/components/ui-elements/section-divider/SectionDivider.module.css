@@ -1,16 +1,14 @@
+/*
+ * Full-bleed line: border-image paints the fill 100vw beyond each side of the
+ * hr, so it reaches both screen edges whatever its container's width, without
+ * widening the layout or adding a horizontal scrollbar (unlike width: 100vw).
+ */
 .sectionDivider {
   border: none;
-  border-top: 3px solid var(--accent);
+  height: 3px;
   padding: 0;
   margin: 0;
-  width: 100dvw;
-  width: 100vw;
-}
-
-@media (min-width: 1025px) {
-  .sectionDivider {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem 1rem 2rem;
-  }
+  border-image-source: linear-gradient(var(--accent) 0 0);
+  border-image-slice: 0 fill;
+  border-image-outset: 0 100vw;
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--surface-solid);
+  background-color: var(--surface);
   color: var(--accent-dark);
   padding: 0 2rem 2rem 2rem;
   margin: 0 0 0 0;
@@ -32,7 +32,7 @@
   padding: clamp(1rem, 0.9vw, 2rem);
   /* Fallback if alter height in future */
   aspect-ratio: 1 / 1;
-  background-color: transparent;
+  background-color: var(--surface-solid);
   border: none;
   box-shadow: var(--elevation-box-shadow-05);
 }
@@ -57,7 +57,7 @@
 
 .footerCompanyOne,
 .footerCompanyTwo {
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
   font-weight: 500;
   margin-top: 1rem;
 }
@@ -66,7 +66,7 @@
   margin: 0 0 0.5rem 0;
   text-decoration: underline;
   text-decoration-color: var(--accent-dark);
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-weight: 1000;
   font-size: clamp(1.15rem, 2vw, 2rem);
   text-align: start;
@@ -82,34 +82,13 @@ using escaped n character in .ts data values */
   white-space: pre-line;
 }
 
-.footerAdditionalInfo {
-  font-size: 1rem;
-  font-family: "cabin";
-  font-weight: 1000;
-  text-wrap: pretty;
-  margin: 2rem 0 0 0;
-}
-
-.footerAdditionalInfoWiderScreens {
-  display: none;
-  line-height: 1.2;
-  min-height: 1rem;
-  color: var(--accent-dark);
-  font-size: 1rem;
-  font-weight: 900;
-  font-family: "Cabin";
-  padding: 0.125rem 0.25rem;
-  border-bottom: 1px solid var(--primary);
-  text-wrap: pretty;
-}
-
 .footerSubtext {
   font-size: 0.875rem;
-  text-align: justify;
+  text-align: center;
   text-justify: inter-word;
-  text-wrap: pretty;
+  text-wrap: balance;
   hyphens: auto;
-  font-family: "source-sans-3", serif;
+  font-family: "source-sans-3", sans-serif;
   font-weight: 800;
 }
 
@@ -127,15 +106,6 @@ using escaped n character in .ts data values */
 
   .footerCompanyNumber {
     font-size: clamp(00.875rem, 2.5vw, 1rem);
-  }
-
-  .footerAdditionalInfo {
-    display: none;
-  }
-
-  .footerAdditionalInfoWiderScreens {
-    display: block;
-    margin: 0;
   }
 }
 

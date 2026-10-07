@@ -34,8 +34,8 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: transparent;
-  color: var(--accent-headline);
-  font-family: "cabin";
+  color: oklch(82% 0.165 80);
+  font-family: "cabin", sans-serif;
   font-weight: 600;
   font-size: clamp(2.5rem, 1.5rem + 4vw, 10rem);
   letter-spacing: 0.5rem;

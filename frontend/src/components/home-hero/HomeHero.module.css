@@ -17,10 +17,7 @@
   display: block;
 }
 
-/* Prevent duplicate render when overlaying
-StatCards in hero with video */
-@media (min-width: 1024px) {
-  .homeVideo .homeHeroShapesContainer {
-    display: none;
-  }
+/* No StatCards on the video homepage, at any screen size */
+.homeVideo .homeHeroShapesContainer {
+  display: none;
 }

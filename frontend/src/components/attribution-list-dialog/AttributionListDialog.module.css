@@ -1,23 +1,28 @@
+/* Equal 1fr columns in a fit-content grid: every button is as wide as the widest */
 .legalInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem;
-  margin-bottom: 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 0.5rem;
+  width: fit-content;
+  margin: 0 auto 2rem;
 }
 
+/*
+ * Positioning is left to the browser's modal dialog defaults (fixed, inset 0,
+ * margin auto), which centre it on screen. dvh tracks the visible viewport on
+ * mobile, so the dialog never runs under the browser toolbars.
+ */
 .attributionDialog {
-  position: fixed;
-  bottom: 14%;
-  margin: 0 auto;
+  margin: auto;
   padding: 1rem;
   border: none;
   border-radius: 0.925rem;
   background: oklch(100% 0 0);
-  z-index: 100;
   width: 90%;
   box-shadow: var(--elevation-box-shadow-10);
   max-height: 80vh;
+  max-height: 80dvh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -25,28 +30,35 @@
 h2 {
   margin: 0 auto;
   margin-bottom: 1.5rem;
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   text-align: center;
   font-size: 1.5rem;
   text-wrap: balance;
 }
 
+/*
+ * Zero-height sticky row: holds the close button in the dialog's top-right
+ * corner (0.5rem from the top, pulled up into the dialog padding) without
+ * pushing content down, and keeps it in view while the list scrolls.
+ * top and the negative margin-top must match.
+ */
 .buttonWrapper {
+  position: sticky;
+  top: 0.5rem;
+  margin-top: -0.5rem;
+  z-index: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  height: 0;
 }
 
 button.closeButton {
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
+  flex-shrink: 0;
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
   border-radius: 50%;
   font-size: 1rem;
-  z-index: 1;
 }
 
 .attributionLinksWrapper {
@@ -70,7 +82,7 @@ button.closeButton {
   text-align: left;
   color: var(--primary);
   text-decoration: none;
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
   font-size: 0.875rem;
   margin: 0;
   padding: 0;

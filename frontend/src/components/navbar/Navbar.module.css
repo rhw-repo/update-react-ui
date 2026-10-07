@@ -5,6 +5,7 @@
   top: 0;
   z-index: 10;
   padding: 1rem;
+  box-shadow: var(--elevation-box-shadow-05);
 }
 
 /* Home layout: center logo */
@@ -22,14 +23,34 @@
   position: relative;
 }
 
+/* Native <dialog> reset so the modal fills the viewport as a dimmed overlay */
 .modalOverlay {
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: none;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 999;
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Only when open: display on the base rule would override the closed dialog's display: none */
+.modalOverlay[open] {
+  display: flex;
+}
+
+.modalBackdrop {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: default;
 }
 
 .navPages {
@@ -90,12 +111,11 @@
 .navLink {
   display: block;
   width: 100%;
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-weight: 900;
   color: var(--primary);
   background-color: oklch(100% 0 0);
   box-sizing: border-box;
-  width: 100%;
   text-decoration: none;
   transition: background-color 0.2s;
   padding: 0 0.5rem;
@@ -121,7 +141,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-weight: 900;
 }
 
@@ -132,11 +152,11 @@
 .navBrandText {
   display: block;
   grid-column: 2 / 3;
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-weight: 900;
   font-size: clamp(0.875rem, 2vw, 1.25rem);
   text-align: center;
-  color: oklch(33.8% 0.104 253.7);
+  color: var(--primary);
   padding-left: 0;
   padding-right: 0.5rem;
   margin: 0;
@@ -168,6 +188,19 @@
   .navBrandLogo {
   inline-size: clamp(3.8rem, 8vw, 4rem);
 }
+}
+
+@media (max-width: 1024px) {
+  .navContentContainer,
+  .navContentContainerPages,
+  .navRightGroup,
+  .navScrollToContactForm {
+    align-items: center;
+  }
+
+  .navBrand {
+    align-self: center;
+  }
 }
 
 @media (min-width: 1025px) {

@@ -2,22 +2,15 @@ import styles from "./LatestNews.module.css";
 import AbsoluteLinkTemplate from "../ui-elements/absolute-link-template/AbsoluteLinkTemplate";
 import { noIconLinks } from "../../data/absoluteLinks";
 import { cardContent } from "../../data/cardContent";
-import { useNavigate } from "react-router-dom";
 
 const LatestNews = (): React.JSX.Element => {
-  const navigate = useNavigate();
-
   const [latestNewsCard] = cardContent.filter(
-    (c) => c.section === "latest-news"
+    (c) => c.section === "latest-news",
   );
 
   const latestNewsLinks = noIconLinks.filter(
-    (l) => l.section === "latest-news"
+    (l) => l.section === "latest-news",
   );
-
-  const showNotFound = () => {
-    navigate("/404");
-  };
 
   const latestNewsItems = latestNewsLinks.map((link) => {
     const { id, name, url, thumbnailWebp, thumbnailAvif } = link;
@@ -49,23 +42,13 @@ const LatestNews = (): React.JSX.Element => {
   const { heading } = latestNewsCard;
 
   return (
-    <>
-      <section className={styles.latestNewsSection}>
-        <div className={styles.latestNewsCardWrapper}>
-          <h2 className={styles.latestNewsHeading}>{heading}</h2>
+    <section className={styles.latestNewsSection}>
+      <div className={styles.latestNewsCardWrapper}>
+        <h2 className={styles.latestNewsHeading}>{heading}</h2>
 
-          <ul className={styles.newsList}>{latestNewsItems}</ul>
-
-          <button
-            type="button"
-            className={`${styles.latestNewsButton} interactive button--primary`}
-            onClick={showNotFound}
-          >
-            404 Page
-          </button>
-        </div>
-      </section>
-    </>
+        <ul className={styles.newsList}>{latestNewsItems}</ul>
+      </div>
+    </section>
   );
 };
 

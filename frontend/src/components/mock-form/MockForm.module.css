@@ -32,7 +32,7 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 200;
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   color: var(--accent-dark);
 }
 
@@ -48,13 +48,13 @@
   border: 1px solid oklch(84.5% 0 0);
   border-radius: 0.25rem;
   font-size: 1rem;
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
   background-color: var(--surface);
 }
 
 .textarea {
   min-height: 6.25rem;
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
 }
 
 button.submitButton {

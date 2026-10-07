@@ -39,7 +39,7 @@
 
 .cardWrapperHeading,
 .cardWrapperSubheading {
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-weight: 600;
   color: var(--primary);
 }
@@ -86,14 +86,14 @@
 
 .cardWrapperTextGroup {
   grid-area: text;
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
 }
 
 .cardWrapperText {
   color: var(--primary);
   padding: 0 1rem;
   text-align: justify;
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
   font-size: 1rem;
   line-height: 1.4rem;
   text-wrap: pretty;
@@ -148,7 +148,7 @@
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   color: var(--surface-solid);
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-size: clamp(1.25rem, 3vw, 2rem);
   font-weight: 700;
   z-index: 2;

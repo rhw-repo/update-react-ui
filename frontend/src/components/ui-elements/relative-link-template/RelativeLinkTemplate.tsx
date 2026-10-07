@@ -22,37 +22,41 @@ const RelativeLinkTemplate = ({ links }: Props): React.JSX.Element => {
   }
 
   return (
-    <>
-      <section className={styles.linkSection}>
-        <ul className={styles.list}>
-          {links.map(({ slug, heading, imageWebp, imageAvif, imageAlt }) => (
-            <li key={slug} className={styles.listItem}>
-              <Link
-                to={`/${slug}`}
-                className={`${styles.listItemLink} ${styles.listItemGrid}`}
-              >
-                <div className={styles.listItemImageWrapper}>
-                  {imageWebp && imageAvif && (
-                    <picture>
-                      <source srcSet={imageWebp} type="image/webp" />
-                      <img
-                        fetchPriority="high"
-                        src={imageAvif}
-                        alt={imageAlt!}
-                        className={styles.cardImageWrapperCardImage}
-                      />
-                    </picture>
-                  )}
-                  <div className={styles.listItemOverlay}>
-                    <span className={overlayTextClass}>{heading}</span>
-                  </div>
+    <section className={styles.linkSection}>
+      <ul className={styles.list}>
+        {links.map(
+          ({ slug, heading, imageWebp, imageAvif, imageAlt, imagePosition }) => (
+          <li key={slug} className={styles.listItem}>
+            <Link
+              to={`/${slug}`}
+              className={`${styles.listItemLink} ${styles.listItemGrid}`}
+            >
+              <div className={styles.listItemImageWrapper}>
+                {imageWebp && imageAvif && (
+                  <picture>
+                    <source srcSet={imageWebp} type="image/webp" />
+                    <img
+                      fetchPriority="high"
+                      src={imageAvif}
+                      alt={imageAlt!}
+                      className={styles.cardImageWrapperCardImage}
+                      style={
+                        imagePosition
+                          ? { objectPosition: imagePosition }
+                          : undefined
+                      }
+                    />
+                  </picture>
+                )}
+                <div className={styles.listItemOverlay}>
+                  <span className={overlayTextClass}>{heading}</span>
                 </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };
 

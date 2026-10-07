@@ -1,12 +1,19 @@
+/*
+ * Full-bleed background: border-image paints the fill 100vw beyond each side
+ * of the section, reaching both screen edges whatever the section's width,
+ * without widening the layout or adding a horizontal scrollbar.
+ */
 .latestNewsSection {
-  background-color: var(--surface);
-  font-family: "cabin";
+  border-image-source: linear-gradient(var(--surface-muted) 0 0);
+  border-image-slice: 0 fill;
+  border-image-outset: 0 100vw;
+  font-family: "cabin", sans-serif;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .latestNewsCardWrapper {
   position: relative;
-  background-color: var(--surface);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,9 +32,8 @@
 
 .latestNewsHeading {
   color: var(--primary);
-  padding-left: 1rem;
   padding: 0;
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-weight: 1000;
   font-size: 2rem;
   position: relative;
@@ -68,13 +74,15 @@
   object-fit: cover;
   border-radius: 0.25rem;
   box-shadow: var(--elevation-box-shadow-05);
+  /* Fills transparent icon thumbnails so the section's grey doesn't show through */
+  background-color: var(--surface);
 }
 
 .linkText {
   grid-area: text;
   color: var(--text-primary);
   font-size: 1rem;
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
   font-weight: 1000;
 }
 
@@ -91,6 +99,6 @@
   .latestNewsSection {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem 1rem 2rem;
+    padding: 2rem 2rem 1rem 2rem;
   }
 }

@@ -41,7 +41,7 @@ export interface AbsoluteLinkTemplateIcon {
   id: string;
   name: string;
   url: string;
-  section: "footer" | "menu" | "latest-news" | string;
+  section: "footer" | "menu" | "latest-news";
   icon: IconDefinition;
 }
 
@@ -49,7 +49,7 @@ export interface AbsoluteLinkTemplateNoIcon {
   id: string;
   name: string;
   url: string;
-  section: "footer" | "menu" | "attribution-list" | "copyright" | string;
+  section: "footer" | "menu" | "latest-news" | "attribution-list" | "copyright";
   icon?: never;
   thumbnailWebp?: string;
   thumbnailAvif?: string;
@@ -117,8 +117,8 @@ export const noIconLinks: AbsoluteLinkTemplateNoIcon[] = [
   },
   {
     id: "latest-news-04",
-    name: "Latest Gold GCQ5 Commodity Figures",
-    url: "https://www.investing.com/commodities/gold",
+    name: "Goldman Sachs: Gold Is Forecast to Climb",
+    url: "https://www.goldmansachs.com/insights/articles/gold-is-forecast-to-climb-as-central-banks-buy-the-precious-metal",
     section: "latest-news",
     thumbnailWebp: laptopWebp,
     thumbnailAvif: laptopAvif,
@@ -248,6 +248,6 @@ export const noIconLinks: AbsoluteLinkTemplateNoIcon[] = [
     id: "copyright-1",
     url: "https://github.com/rhw-repo?tab=repositories",
     section: "copyright",
-    name: "© R Westnidge Brown, 2026",
+    name: "© R Westnidge, 2026",
   },
 ];

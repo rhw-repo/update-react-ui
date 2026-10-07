@@ -43,9 +43,10 @@ img {
 }
 
 :root {
-  --surface: rgba(255, 255, 255, 0.87);
-  --surface-solid: rgba(255, 255, 255, 1);
-  --primary: oklch(29.8% 0.0873 259.1);
+  --surface: oklch(98.5% 0 none);
+  --surface-solid: oklch(96.7% 0.001 286.375);
+  --surface-muted: oklch(87.2% 0.01 258.338);
+  --primary: oklch(29.3% 0.066 243.157);
   --accent: oklch(85.4% 0.178 85.9);
   --accent-dark: oklch(15.4% 0.0459 259.6);
   --accent-headline: oklch(80.2% 0.178 68.3);
@@ -57,7 +58,7 @@ img {
     0px 6px 6px rgba(0, 0, 0, 0.2), 0px 10px 14px rgba(0, 0, 0, 0.14),
     0px 4px 18px rgba(0, 0, 0, 0.12);
   /* Button state layers */
-  --primary-rgb: 0, 53, 102;
+  --primary-rgb: 8, 47, 73;
   --state-hover-opacity: 0.08;
   --state-focus-opacity: 0.1;
   --state-press-opacity: 0.1;
@@ -137,14 +138,15 @@ img {
 }
 
 .button--primary:hover {
-  background-color: oklch(38.9% 0.079 260);
+  background-color: oklch(39.1% 0.09 240.876);
 }
 
 .button--primary:active {
-  background-color: oklch(22.9% 0.068 259.4);
+  background-color: oklch(22.9% 0.052 243.2);
 }
 
 body {
+  background-color: var(--surface);
   box-sizing: border-box;
   width: 100%;
   display: block;

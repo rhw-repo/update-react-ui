@@ -8,7 +8,6 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: var(--surface);
   padding: 0;
   overflow: hidden;
 }
@@ -17,7 +16,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem;
   list-style: none;
 }
 
@@ -29,7 +28,6 @@ section {
 
 .listItemGrid {
   position: relative;
-  background-color: var(--surface);
   border-radius: 0.5rem;
   box-shadow: var(--elevation-box-shadow-10);
   display: grid;
@@ -49,7 +47,19 @@ section {
 .listItemGrid > * {
   position: relative;
   z-index: 1;
-} 
+}
+
+.listItemGrid > :global(.sr-only) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
 
 .listItemHeading,
 .listItemPreview,
@@ -64,7 +74,7 @@ section {
 
 .listItemHeading {
   grid-area: heading;
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
@@ -72,17 +82,17 @@ section {
 
 .listItemSubheading {
   grid-area: subheading;
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
-  color: var(--accent-headline);
+  font-weight: 900;
+  color: var(--accent-dark);
   padding: 0 0 0.5rem 1rem;
 }
 
 .listItemPreview {
   grid-area: preview;
   color: var(--primary);
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   text-align: justify;
@@ -96,10 +106,49 @@ section {
   position: relative;
   grid-area: image;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 5 / 2;
   overflow: hidden;
-  margin-bottom: 0.5rem;
   margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.listItemCardImageWrapper picture {
+  display: block;
+  height: 100%;
+}
+
+.listItemOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+}
+
+.listItemOverlayText {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  background: rgba(255, 255, 255, 0.39);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.2px);
+  -webkit-backdrop-filter: blur(13.2px);
+  color: var(--primary);
+  font-family: "cabin", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+.listItemCardImageWrapperGold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(250, 193, 5, 0.25);
 }
 
 .cardImageWrapperCardImage {
@@ -116,7 +165,6 @@ section {
   font-weight: 400;
   text-decoration: none;
 }
-
 
 .linkSection a:hover .listItemCardImageWrapper::after,
 .linkSection a:focus-visible .listItemCardImageWrapper::after,
@@ -184,6 +232,29 @@ section {
     margin-top: auto;
     padding-bottom: 1rem;
   }
+
+  /* Featured first card: image left, text right, so it isn't a full-width image */
+  .listItem:first-child .listItemGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Equal 1fr rows above and below centre the text vertically beside the image */
+    grid-template-rows: 1fr auto auto auto 1fr;
+    grid-template-areas:
+      "image ."
+      "image heading"
+      "image subheading"
+      "image preview"
+      "image .";
+  }
+
+  .listItem:first-child .listItemCardImageWrapper {
+    aspect-ratio: 2 / 1;
+    margin-bottom: 0;
+  }
+
+  .listItem:first-child .listItemPreview {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -191,5 +262,9 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+  }
+
+  .listItemOverlayText {
+    padding: 0.8rem 0;
   }
 }

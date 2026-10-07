@@ -11,7 +11,6 @@ export interface FooterContent {
   addressTwoLineTwo: string;
   addressTwoLineThree: string;
   companyNumberTwo: string;
-  additionalInfoTwo: string;
   subtext: string;
 }
 
@@ -28,10 +27,9 @@ const footerContent: FooterContent = {
   addressTwoLineThree: "London, United Kingdom, EC3M 3BY",
   telephoneTwo: "Tel: +44 20 7946 0523",
   companyNumberTwo: "Company Registration Number:\n09876543",
-  additionalInfoTwo: "Legal information:",
   subtext: `Nothing on this website constitutes financial, investment or
     legal advice, and should not be relied upon as such. Vorlond is a
-    fictional company created for a demo submission to Chingu.`,
+    demonstration.`,
 };
 
 export default footerContent;

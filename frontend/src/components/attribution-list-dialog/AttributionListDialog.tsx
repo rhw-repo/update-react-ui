@@ -9,6 +9,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
+// Images & Video credits dialog is hidden until it gets more design work; set true to restore
+const SHOW_ATTRIBUTIONS = false;
+
 const AttributionListDialog: React.FC = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +28,7 @@ const AttributionListDialog: React.FC = () => {
   };
 
   const targetLink: AbsoluteLinkTemplateNoIcon = noIconLinks.find(
-    (link) => link.id === "copyright-1"
+    (link) => link.id === "copyright-1",
   ) as AbsoluteLinkTemplateNoIcon;
 
   return (
@@ -48,37 +51,37 @@ const AttributionListDialog: React.FC = () => {
           </AbsoluteLinkTemplate>
         )}
 
-        {!isOpen && (
-          <div className={styles.buttonWrapper}>
-            <button
-              type="button"
-              className="interactive button--primary"
-              onClick={handleShow}
-            >
-              Images & Video: Credits
-            </button>
-          </div>
+        {SHOW_ATTRIBUTIONS && !isOpen && (
+          <button
+            type="button"
+            className="interactive button--primary"
+            onClick={handleShow}
+          >
+            Images & Video
+          </button>
         )}
       </div>
 
-      <dialog ref={dialogRef} className={styles.attributionDialog}>
-        <div className={styles.buttonWrapper}>
-          <button
-            type="button"
-            className={`interactive button--primary ${styles.closeButton}`}
-            onClick={handleHide}
-          >
-            <FontAwesomeIcon icon={faXmark} aria-hidden="true" />
-            <span className="sr-only">Hide Credits</span>
-          </button>
-        </div>
-        <div className={styles.attributionLinksWrapper}>
-          <h2>Icons, Images & Videos By</h2>
-          <div className={styles.attributionList}>
-            <AttributionList />
+      {SHOW_ATTRIBUTIONS && (
+        <dialog ref={dialogRef} className={styles.attributionDialog}>
+          <div className={styles.buttonWrapper}>
+            <button
+              type="button"
+              className={`interactive button--primary ${styles.closeButton}`}
+              onClick={handleHide}
+            >
+              <FontAwesomeIcon icon={faXmark} aria-hidden="true" />
+              <span className="sr-only">Hide Credits</span>
+            </button>
           </div>
-        </div>
-      </dialog>
+          <div className={styles.attributionLinksWrapper}>
+            <h2>Creators</h2>
+            <div className={styles.attributionList}>
+              <AttributionList />
+            </div>
+          </div>
+        </dialog>
+      )}
     </>
   );
 };

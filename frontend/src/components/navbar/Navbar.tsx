@@ -23,7 +23,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
   const { pathname } = location;
 
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -68,20 +68,16 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
     close();
   };
 
+  // Native modal dialog: traps focus, makes the page inert, handles Escape
   useEffect(() => {
-    if (!open) return;
-    const closeMenuOnEscapeKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        e.stopPropagation();
-        close();
-      }
-    };
+    if (open) dialogRef.current?.showModal();
+  }, [open]);
 
-    window.addEventListener("keydown", closeMenuOnEscapeKeyDown, true);
-    return () => {
-      window.removeEventListener("keydown", closeMenuOnEscapeKeyDown, true);
-    };
-  }, [open, menuItems.length]);
+  // Escape fires "cancel"; keep React state in sync instead of letting it close itself
+  const closeMenuOnCancel = (e: React.SyntheticEvent<HTMLDialogElement>) => {
+    e.preventDefault();
+    close();
+  };
 
 
   const logoWebp = LogoWebp;
@@ -97,50 +93,34 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
     <FontAwesomeIcon icon={faChevronDown} className={styles.navIcon} />
   );
 
-  const videoHome: React.ReactNode = isVideoHome ? (
-    <>
-      <div className={styles.navBrand}>
-        <picture>
-          <source srcSet={logoWebp} type="image/webp" />
-          <img
-            src={logoAvif}
-            alt="Vorlond logo"
-            loading="lazy"
-            className={styles.navBrandLogo}
-          />
-        </picture>
-        <h1 className={styles.navBrandText}>{message}</h1>
-      </div>
-    </>
-  ) : null;
+  // Same logo and brand text in every navbar variant
+  const brand = (
+    <div className={styles.navBrand}>
+      <picture>
+        <source srcSet={logoWebp} type="image/webp" />
+        <img
+          src={logoAvif}
+          alt="Vorlond logo"
+          loading="lazy"
+          className={styles.navBrandLogo}
+        />
+      </picture>
+      <h1 className={styles.navBrandText}>{message}</h1>
+    </div>
+  );
 
   const pagesTemplate = (
-    <>
-      <div className={styles.navBrand}>
-        <picture className={styles.navBrandLogo}>
-          <source srcSet={logoWebp} type="image/webp" />
-          <img
-            src={logoAvif}
-            alt="Vorlond logo"
-            loading="lazy"
-            className={styles.navBrandLogo}
-          />
-        </picture>
-        <h1 className={styles.navBrandText}>{message}</h1>
-      </div>
-
-      <div className={styles.navRightGroup}>
-        <GoHomeLinkTemplate goHomeLinkValue={goToHomepageIcon} />
-        <ScrollToContactFormTemplate
-          linkValue={
-            <>
-              {contactIcon} {goToContactIcon}
-            </>
-          }
-          onClick={onContactClick}
-        />
-      </div>
-    </>
+    <div className={styles.navRightGroup}>
+      <GoHomeLinkTemplate goHomeLinkValue={goToHomepageIcon} />
+      <ScrollToContactFormTemplate
+        linkValue={
+          <>
+            {contactIcon} {goToContactIcon}
+          </>
+        }
+        onClick={onContactClick}
+      />
+    </div>
   );
 
   const homePagesTemplate = (
@@ -180,19 +160,21 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
         </div>
 
         {open && (
-          <div
+          <dialog
+            ref={dialogRef}
             className={styles.modalOverlay}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby={navPanelId}
-            onClick={close}
+            aria-label="Site navigation"
+            onCancel={closeMenuOnCancel}
           >
-            <nav
-              id={navPanelId}
-              ref={panelRef}
-              aria-label="Primary"
-              onClick={(e) => e.stopPropagation()}
-            >
+            {/* Full-screen backdrop: clicking outside the menu closes it */}
+            <button
+              type="button"
+              className={styles.modalBackdrop}
+              aria-label="Close menu"
+              tabIndex={-1}
+              onClick={close}
+            />
+            <nav id={navPanelId} aria-label="Primary">
               <ul className={styles.navLinks}>
                 {menuItems.map(({ to, label }) => (
                   <li key={to}>
@@ -208,9 +190,9 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
                 ))}
               </ul>
             </nav>
-          </div>
+          </dialog>
         )}
-        {videoHome}
+        {brand}
         {mainTemplate}
       </section>
     </header>

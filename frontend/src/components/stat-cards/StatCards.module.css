@@ -12,45 +12,41 @@
 .textboxCardMobileTablets {
   display: block;
   padding: 0;
+  margin: 1rem;
 }
 
+/*
+ * Each card spans two rows of this grid (heading, subheading) and passes them
+ * down via subgrid, so headings and subheadings share row heights across cards.
+ * Vertical space between cards comes from the card's margin-top, not row-gap,
+ * because row-gap would also land between a card's heading and subheading.
+ */
 .textboxContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
   width: 100%;
   max-width: 100%;
   height: auto;
-  gap: 1.75rem;
+  column-gap: 1.75rem;
+  row-gap: 0;
   padding: 1rem;
   margin: 0;
 }
 
 .textboxContainerShapes {
-  grid-column: 1 / 2;
   position: relative;
-  padding-top: calc(var(--shape-badge-size) / 2 + 1rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  row-gap: 0.4rem;
   padding: 1rem;
-  gap: 1rem;
   width: 100%;
   height: auto;
-  margin-top: 1rem;
+  margin-top: 2.75rem;
   border-radius: 0.3rem;
-  border-top: 5px solid var(--accent);
-  border-left: 1px solid var(--primary);
-  border-right: 1px solid var(--primary);
-  border-bottom: 1px solid var(--primary);
+  border: 1px solid var(--primary);
   background-color: var(--surface-solid);
   box-shadow: var(--elevation-box-shadow-10);
-  border-top: var(--shape-badge-border) solid var(--accent);
-}
-
-.textboxContainerShapes:nth-child(2),
-.textboxContainerShapes:nth-child(4) {
-  grid-column: 2 / 3;
 }
 
 .shapeBadge {
@@ -68,6 +64,19 @@
   margin-bottom: 3rem;
 }
 
+/* /home-one: frosted silver, matching .heroImageOverlayTextTransparent scrim in HomeHeroImage */
+.shapeBadgeFrosted {
+  background-color: rgba(255, 255, 255, 0.43);
+  backdrop-filter: blur(12.9px);
+  -webkit-backdrop-filter: blur(12.9px);
+  border-color: oklch(82% 0.012 258.338);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.shapeBadgeGold {
+  border-color: oklch(91% 0.09 90);
+}
+
 .textboxContainerShapesIcon {
   position: absolute;
   top: 50%;
@@ -82,23 +91,28 @@
 
 .textbox__para {
   margin: 0;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  row-gap: inherit;
+  justify-items: center;
   color: var(--primary);
   padding-top: 2rem;
 }
 
+/* Bottom of the heading row, so the heading-to-subheading space is the same in every card */
 .textbox__text {
-  font-family: "cabin";
+  align-self: end;
+  font-family: "cabin", sans-serif;
   font-weight: 600;
   font-size: 1.29rem;
   text-align: center;
 }
 
+/* Top of the subheading row, so every subheading starts at the same level */
 .textbox__subtext {
-  font-family: "source-sans-3";
+  align-self: start;
+  font-family: "source-sans-3", sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
   text-align: center;
@@ -112,33 +126,23 @@
 }
 
 @media screen and (min-width: 680px) {
+  /* One row of equal-width cards side by side */
   .textboxContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: auto;
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: 1.75rem;
     padding: 1rem 0;
   }
 
   .textboxContainerShapes {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    width: 100%;
-    height: 10rem;
-  }
-
-  .textbox__para {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+    row-gap: 0.5rem;
+    min-height: 10rem;
+    margin-top: 2rem;
   }
 
   .textbox__text {
-    text-align: center;
     font-size: 1.6rem;
   }
 

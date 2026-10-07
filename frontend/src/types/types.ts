@@ -39,7 +39,6 @@ export type CardData = {
   text?: string;
   preview?: string;
   fullText?: string;
-  subtextPreview?: string;
   fullSubtext?: string;
   subtext?: string;
   images?: ImageItem[];

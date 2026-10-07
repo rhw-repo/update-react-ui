@@ -5,7 +5,7 @@
   align-items: stretch;
   color: var(--primary);
   margin: 0;
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
   padding: 0 1rem;
 }
 
@@ -21,16 +21,23 @@
   font-weight: 500;
 }
 
+/*
+ * Mobile portrait: preview full width, Read More button underneath.
+ * gap is the only space between them (p and button margins zeroed);
+ * the space the p margins gave above/below moves to the row itself.
+ */
 .cardExpandableRow {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: 0.5rem;
-  flex-wrap: nowrap;
+  margin: 0.9rem 0;
 }
 
 .cardExpandableRow p {
   flex: 1;
   min-width: 0;
+  margin: 0;
 }
 
 .cardSubtextCollapsed,
@@ -50,7 +57,7 @@
   align-items: center;
   align-self: center;
   flex-wrap: nowrap;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
 .cardToggleButton {
@@ -63,12 +70,10 @@
   gap: 0.4rem;
   width: auto;
   white-space: nowrap;
-  background-color: var(--surface-solid);
   color: var(--accent-headline);
-  box-shadow: var(--elevation-box-shadow-05);
   border: none;
   border-radius: 0.5rem;
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
@@ -84,10 +89,10 @@
   gap: 0.4rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: var(--surface-solid);
+  background-color: transparent;
   color: var(--accent-headline);
-  margin-top: 0.25rem;
-  font-family: "cabin";
+  margin-top: 0;
+  font-family: "cabin", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0.5rem;
@@ -100,23 +105,45 @@
 }
 
 .cardSubtextCollapsed {
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
-  background-color: var(--surface-solid);
-  padding: 1rem;
-  border-radius: 0.25rem;
+  padding: 0;
   text-wrap: pretty;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
 }
 
 .cardSubtext {
   font-size: 0.875rem;
   text-align: justify;
-  box-shadow: var(--elevation-box-shadow-10);
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: 0;
   text-wrap: pretty;
-  background-color: var(--surface-solid);
+}
+
+/* Landscape and up: preview and Read More button side by side */
+@media screen and (min-width: 600px) {
+  .cardExpandableRow {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+
+  .cardExpandableRow p {
+    margin: 1em 0;
+  }
+
+  .cardExpandableRow:has(> button[aria-expanded="true"]) {
+    gap: 0.4rem;
+  }
+
+  .cardToggleButtonInline {
+    margin-top: 0.25rem;
+  }
 }
 
 @media screen and (min-width: 680px) {

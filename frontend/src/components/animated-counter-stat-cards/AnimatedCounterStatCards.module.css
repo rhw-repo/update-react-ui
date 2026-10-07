@@ -9,9 +9,11 @@
   box-shadow: var(--elevation-shadow-10);
 }
 
+/* Grid (not flex-wrap) so every row, and so every card, is as tall as the tallest card */
 .textboxContainer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(8rem, 40vw));
+  grid-auto-rows: 1fr;
   justify-content: center;
   align-content: center;
   gap: 3rem 0.5rem;
@@ -19,13 +21,11 @@
 }
 
 .textboxContainerShapes {
-  flex: 0 0 clamp(8rem, 40vw, calc((100% - 1.75rem) / 2));
-  aspect-ratio: auto;
   overflow: visible;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 1rem;
   gap: 1rem;
   border-radius: 0.3rem;
@@ -43,7 +43,7 @@
   width: 3.8rem;
   height: 3.8rem;
   background-color: oklch(100% 0 0);
-  border: 5px solid var(--accent);
+  border: 5px solid oklch(91% 0.09 90);
   border-radius: 50%;
   z-index: 4;
   pointer-events: none;
@@ -64,6 +64,7 @@
 
 .textboxPara {
   margin: 0;
+  flex: 1;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -74,17 +75,20 @@
 
 .textboxCount,
 .textboxText {
-  font-family: "cabin";
+  font-family: "cabin", sans-serif;
   font-weight: 600;
   text-align: center;
   margin-bottom: 0;
 }
 
 .textboxSubtext {
-  font-family: "source-sans-3";
+  font-family: "source-sans-3", sans-serif;
   font-weight: 600;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   text-align: center;
   min-height: 1.4rem;
+  /* Pin to the bottom of the card so subheadings line up across cards */
+  margin-top: auto;
 }
 
 .textboxCount {
@@ -94,10 +98,6 @@
 .textboxText {
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   text-wrap: pretty;
-}
-
-.textboxSubtext {
-  font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 
 @media screen and (min-width: 361px) {
@@ -121,20 +121,13 @@
 
 @media screen and (min-width: 800px) {
   .textboxContainer {
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: no-wrap;
+    /* One row of cards side by side, however many there are */
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 10.8rem;
     gap: 0.5rem;
     padding: 1rem 0;
     margin: 0 1rem;
-  }
-
-  .textboxContainerShapes {
-    flex: 0 0 clamp(8rem, 10.8rem, 30rem);
-    aspect-ratio: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: no-wrap;
   }
 
   .textboxPara {

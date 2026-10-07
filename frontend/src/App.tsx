@@ -1,5 +1,5 @@
 import { useRef, useCallback } from "react";
-import { Routes, Route, Outlet, Navigate } from "react-router-dom";
+import { Routes, Route, Outlet, Navigate, useLocation } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
@@ -15,6 +15,7 @@ import ShapesExamples from "./pages/content-pages/ShapesExamples";
 import ErrorBoundary from "./components/error-boundary/ErrorBoundary";
 
 const Layout = (): React.JSX.Element => {
+  const { pathname } = useLocation();
   const contactRef = useRef<HTMLElement | null>(null);
 
   const scrollToContact = useCallback(() => {
@@ -31,9 +32,11 @@ const Layout = (): React.JSX.Element => {
     <>
       <Navbar onContactClick={scrollToContact} />
       <main>
-        <Outlet />
+        <ErrorBoundary key={pathname}>
+          <Outlet />
+        </ErrorBoundary>
       </main>
-      <Footer contactRef={contactRef} onContactClick={scrollToContact} />
+      <Footer contactRef={contactRef} />
     </>
   );
 };

@@ -70,12 +70,6 @@ As their business had grown since the original launch, their goals were:
 
 ---
 
-### Outcome
-
-Client approved the work for MVP development, scheduled to begin in late autumn 2025.
-
----
-
 **To run this project locally:**
 
 Prerequisites:

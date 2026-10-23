@@ -6,7 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a React + TypeScript "lookbook" style marketing site — a demo built from a company-branded template originally made for a financial sector client. It is a static Vite SPA that showcases layout/component variants (multiple homepage styles, content page templates, animated stat counters, wave dividers, shaped highlight boxes). There is no backend in this repo: all page content is authored as typed data in `frontend/src/data/*.ts` files, which is intended to later be swapped for a CMS-driven API.
 
-The actual app lives entirely under `frontend/`; the repo root only holds a pnpm workspace wrapper (no root `package.json` scripts — always `cd frontend` first, or use `pnpm --dir frontend`).
+The actual app lives entirely under `frontend/`. The repo root has no `package.json`, `pnpm-workspace.yaml` or lockfile — always `cd frontend` first, or use `pnpm --dir frontend`.
+
+**Only one lockfile**: `frontend/pnpm-lock.yaml` is the single lockfile. Never run `pnpm`/`npm`/`npx` commands (install, add, init) from the repo root — doing so creates a stray root `package.json` / lockfile, and an extra lockfile has broken the deploy build before. If one appears at the root, flag it rather than committing it.
 
 ## Commands
 

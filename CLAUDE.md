@@ -22,7 +22,7 @@ pnpm preview       # preview the production build
 
 There is no test suite configured in this repo (no test runner in `package.json`, no `*.test.*`/`*.spec.*` files).
 
-Package manager is pnpm (see `frontend/pnpm-lock.yaml`, `frontend/pnpm-workspace.yaml`). The workspace config pins `minimumReleaseAge: 4320` and overrides for `semver`/`chokidar`/`vite` — don't casually bump those without checking `pnpm-workspace.yaml`.
+Package manager is pnpm (see `frontend/pnpm-lock.yaml`, `frontend/pnpm-workspace.yaml`). The workspace config pins `minimumReleaseAge: 4320` and overrides for `semver`/`chokidar` — don't casually bump those without checking `pnpm-workspace.yaml`.
 
 ## Architecture
 
